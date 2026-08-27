@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/personal-ai-workshop/package-manifest.schema.json",
+  "title": "Personal AI Workshop package manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "name", "purpose", "use_when", "do_not_use_when", "entry_role", "human_gates", "validations", "content_license", "code_license"],
+  "properties": {
+    "schema_version": {"const": "workshop.package.v1"},
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "name": {"type": "string", "minLength": 1},
+    "purpose": {"type": "string", "minLength": 1},
+    "use_when": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "do_not_use_when": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "entry_role": {"type": "string", "minLength": 1},
+    "human_gates": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "validations": {"type": "array", "items": {"enum": ["EXPERT_REVIEW", "SIMULATION_TEST", "DIFF_CHECK", "FINAL_TEST", "SOURCE_CHECK", "SCOPE_CHECK"]}},
+    "content_license": {"type": "string", "minLength": 1},
+    "code_license": {"type": "string", "minLength": 1}
+  }
+}
+

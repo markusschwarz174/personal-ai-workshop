@@ -1,0 +1,13 @@
+{
+  "$schema": "../../package-core/package-manifest.schema.json",
+  "schema_version": "workshop.package.v1",
+  "id": "observer",
+  "name": "Observer Package",
+  "version": "0.1.0",
+  "purpose": "Inspect an existing situation without changing it.",
+  "entry_role": "OBSERVER",
+  "risk_level": "low",
+  "validators": ["SOURCE_CHECK", "SCOPE_CHECK"],
+  "human_gates": ["approve_observation_scope"],
+  "entrypoint": "PACKAGE.md"
+}

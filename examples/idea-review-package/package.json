@@ -1,0 +1,13 @@
+{
+  "$schema": "../../package-core/package-manifest.schema.json",
+  "schema_version": "workshop.package.v1",
+  "id": "idea-review",
+  "name": "Idea Review Package",
+  "version": "0.1.0",
+  "purpose": "Test an idea before time is spent building it.",
+  "entry_role": "IDEA_REVIEWER",
+  "risk_level": "medium",
+  "validators": ["EXPERT_REVIEW", "SIMULATION_TEST"],
+  "human_gates": ["approve_review_question", "decide_after_review"],
+  "entrypoint": "PACKAGE.md"
+}

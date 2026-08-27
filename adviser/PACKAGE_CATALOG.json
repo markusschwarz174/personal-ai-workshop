@@ -1,0 +1,18 @@
+{
+  "schema_version": "workshop.package-catalog.v1",
+  "packages": [
+    {
+      "id": "observer",
+      "path": "examples/observer-package",
+      "use_when": ["The human needs a bounded, evidence-based observation without diagnosis or changes."],
+      "entry_role": "OBSERVER"
+    },
+    {
+      "id": "idea-review",
+      "path": "examples/idea-review-package",
+      "use_when": ["The human wants an idea examined from an independent perspective before investing more work."],
+      "entry_role": "IDEA_REVIEWER"
+    }
+  ],
+  "no_match": "Handle a simple request directly or create a new package only after repeated use proves it is needed."
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "workshop.experience.v1",
+  "lessons": [
+    {
+      "id": "EXP-0001",
+      "lesson": "Write an independent idea review before reading the original recommendation.",
+      "evidence": ["A reviewer copied the first framing when comparison happened before its own report was written."],
+      "reuse_when": ["A second opinion is intended to reduce confirmation bias."],
+      "limitation": "A blind review needs sufficient access to the original problem and sources.",
+      "approved_by_human": true
+    }
+  ]
+}
+

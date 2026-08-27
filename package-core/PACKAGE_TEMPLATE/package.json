@@ -1,0 +1,14 @@
+{
+  "schema_version": "workshop.package.v1",
+  "id": "replace-me",
+  "name": "Replace Me",
+  "purpose": "Describe the useful outcome.",
+  "use_when": ["Describe a real trigger."],
+  "do_not_use_when": ["Describe an adjacent task that should route elsewhere."],
+  "entry_role": "EXPLORER",
+  "human_gates": ["approve_start"],
+  "validations": ["EXPERT_REVIEW"],
+  "content_license": "CC-BY-4.0",
+  "code_license": "MIT"
+}
+

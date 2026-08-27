@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/personal-ai-workshop/post-box.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "messages"],
+  "properties": {
+    "schema_version": {"const": "workshop.post-box.v1"},
+    "messages": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/message"}
+    }
+  },
+  "$defs": {
+    "message": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "created_at", "sender", "recipient", "type", "status", "summary", "evidence"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^MSG-[0-9]{8}-[0-9]{3}$"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "sender": {"type": "string", "minLength": 1},
+        "recipient": {"type": "string", "minLength": 1},
+        "type": {"enum": ["HANDOVER", "NOTE"]},
+        "status": {"enum": ["PENDING", "ACKNOWLEDGED", "COMPLETED"]},
+        "summary": {"type": "string", "minLength": 1},
+        "requested_action": {"type": "string"},
+        "evidence": {"type": "array", "items": {"type": "string"}},
+        "acknowledged_at": {"type": "string", "format": "date-time"},
+        "completed_at": {"type": "string", "format": "date-time"}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "ACKNOWLEDGED"}}}, "then": {"required": ["acknowledged_at"]}},
+        {"if": {"properties": {"status": {"const": "COMPLETED"}}}, "then": {"required": ["acknowledged_at", "completed_at"]}}
+      ]
+    }
+  }
+}
+
