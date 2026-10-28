@@ -2,7 +2,7 @@
 
 [Deutsch](README.md) · **English**
 
-**One entry. Many packages. Experience that stays.**
+**A human-led approach to working with specialized AI agents.**
 
 [Open the interactive Agent Council](https://markusschwarz174.github.io/personal-ai-workshop/)
 

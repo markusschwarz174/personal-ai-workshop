@@ -2,7 +2,7 @@
 
 **Deutsch** · [English](README.en.md)
 
-**Ein Einstieg. Viele Pakete. Erfahrung, die bleibt.**
+**Ein vom Menschen geführter Ansatz für die Zusammenarbeit mit spezialisierten KI-Agenten.**
 
 [Interaktive Agentenrunde öffnen](https://markusschwarz174.github.io/personal-ai-workshop/)
 
